@@ -1,0 +1,16 @@
+from astropy.io import fits
+import numpy as np
+
+#Open image of sun
+hdul1 = fits.open('NAME OF FILE.fits')
+raw_image = hdul1[0].data
+
+#Open master flatfield
+hdul2 = fits.open('masterflat.fits')
+flatfield = hdul2[0].data
+
+#Applying the master flatfield corrections
+final_image = raw_image/flatfield
+
+hdu = fits.PrimaryHDU(final_image)
+hdu.writeto('NAME OF FILE.fits')
