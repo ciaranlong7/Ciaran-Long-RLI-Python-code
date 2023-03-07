@@ -2,7 +2,7 @@ from astropy.io import fits
 import numpy as np
 
 #Open image of sun
-hdul1 = fits.open('NAME OF FILE.fits')
+hdul1 = fits.open('V_Sun_0.05_aboveaverage1.fits')
 raw_image = hdul1[0].data
 
 #Open master flatfield
@@ -13,4 +13,4 @@ flatfield = hdul2[0].data
 final_image = raw_image/flatfield
 
 hdu = fits.PrimaryHDU(final_image)
-hdu.writeto('NAME OF FILE.fits')
+hdu.writeto('V_Sun_0.05_CORRECTED.fits')
