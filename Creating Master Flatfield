@@ -2,48 +2,39 @@ from astropy.io import fits
 import numpy as np
 
 #Turns Image 1 into array
-hdul1 = fits.open('V_Flat_0.05_1.fits')
+hdul1 = fits.open('FILENAME.fits')
 data1 = hdul1[0].data
 
 #Turns Image 2 into array
-hdul2 = fits.open('V_Flat_0.05_2.fits')
+hdul2 = fits.open('FILENAME.fits')
 data2 = hdul2[0].data
 
 #Turns Image 3 into array
-hdul3 = fits.open('V_Flat_0.05_3.fits')
+hdul3 = fits.open('FILENAME.fits')
 data3 = hdul3[0].data
 
 #Turns Image 4 into array
-hdul4 = fits.open('V_Flat_0.05_4.fits')
+hdul4 = fits.open('FILENAME.fits')
 data4 = hdul4[0].data
 
 #Turns Image 5 into array
-hdul5 = fits.open('V_Flat_0.05_5.fits')
+hdul5 = fits.open('FILENAME.fits')
 data5 = hdul5[0].data
 
 #Turns Image 6 into array
-hdul6 = fits.open('V_Flat_0.05_6.fits')
+hdul6 = fits.open('FILENAME.fits')
 data6 = hdul6[0].data
 
 #Turns Image 7 into array
-hdul7 = fits.open('V_Flat_0.05_7.fits')
+hdul7 = fits.open('FILENAME.fits')
 data7 = hdul7[0].data
 
 #Turns Image 8 into array
-hdul8 = fits.open('V_Flat_0.05_8.fits')
+hdul8 = fits.open('FILENAME.fits')
 data8 = hdul8[0].data
 
-#Turns Image 9 into array
-#hdul9 = fits.open('FILENAME.fits')
-#data9 = hdul9[0].data
-
-#Turns Image 10 into array
-#hdul10 = fits.open('FILENAME.fits')
-#data10 = hdul10[0].data
-
 #Combines images into one array
-#data = np.array([data1, data2, data3, data4, data5, data6, data7, data8, data9, data10])
-data = np.array([data1, data2, data3])
+data = np.array([data1, data2, data3, data4, data5, data6, data7, data8])
 #need to create empty 2d array here
 master = np.zeros((data.shape[1], data.shape[2]))
 
