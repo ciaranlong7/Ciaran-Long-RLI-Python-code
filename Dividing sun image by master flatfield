@@ -12,5 +12,6 @@ flatfield = hdul2[0].data
 #Applying the master flatfield corrections
 final_image = raw_image/flatfield
 
+#Turning final image into a .fits file
 hdu = fits.PrimaryHDU(final_image)
 hdu.writeto('FILENAME.fits')
